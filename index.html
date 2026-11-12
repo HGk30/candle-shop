@@ -7,8 +7,10 @@
     <title>Свічки — демо-магазин ароматизованих свічок</title>
     <meta name="description" content="Демо-магазин ароматизованих свічок">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@600&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -17,7 +19,14 @@
     <header>
         <a href="index.html">Свічки</a>
         <nav>
-            <a href="index.html">Каталог</a>
+            <div class="nav-item has-dropdown">
+                <a href="index.html">Каталог</a>
+                <div class="dropdown">
+                    <a href="index.html?category=candles">Свічки</a>
+                    <a href="index.html?category=incense">Ароматичні пахощі</a>
+                    <a href="index.html?category=diffusers">Аромадифузори</a>
+                </div>
+            </div>
             <a href="cart.html">Кошик</a>
             <a href="checkout.html">Оформлення</a>
         </nav>
@@ -26,70 +35,17 @@
     <main>
         <h1>Ароматизовані свічки</h1>
         <section id="catalog">
-            <div class="product-grid">
-
-                <article class="product-card" data-id="1" data-name="Ванільний вечір" data-price="349">
-                    <img src="img/vanilla.png" alt="Ароматична свічка «Ванільний вечір»" width="400" height="400"
-                        loading="lazy">
-                    <h2>Ванільний вечір</h2>
-                    <p class="product-description">Соєвий віск, аромат ванілі та карамелі. Горить до 40 годин.</p>
-                    <p class="product-price">349 грн</p>
-                    <button type="button">Додати в кошик</button>
-                </article>
-                <article class="product-card" data-id="2" data-name="Лавандовий спокій" data-price="379">
-                    <img src="img/lavender.png" alt="Ароматична свічка «Лавандовий спокій»" width="400" height="400"
-                        loading="lazy">
-                    <h2>Лавандовий спокій</h2>
-                    <p class="product-description">Соєвий віск, натуральна лаванда та нотки ромашки. Горить до 45 годин.
-                    </p>
-                    <p class="product-price">379 грн</p>
-                    <button type="button">Додати в кошик</button>
-                </article>
-                <article class="product-card" data-id="3" data-name="Кава на світанку" data-price="379">
-                    <img src="img/coffee.png" alt="Ароматична свічка «Кава на світанку»" width="400" height="400"
-                        loading="lazy">
-                    <h2>Кава на світанку</h2>
-                    <p class="product-description">Соєвий віск, насичені ноти свіжозмеленої кави та темного шоколаду. Горить до 45 годин.
-                    </p>
-                    <p class="product-price">379 грн</p>
-                    <button type="button">Додати в кошик</button>
-                </article>
-                <article class="product-card" data-id="4" data-name="Морський бриз" data-price="379">
-                    <img src="img/ocean.png" alt="Ароматична свічка «Морський бриз»" width="400" height="400"
-                        loading="lazy">
-                    <h2>Морський бриз</h2>
-                    <p class="product-description">Соєвий віск, морська сіль та свіжі озонові ноти. Горить до 45 годин.
-                    </p>
-                    <p class="product-price">349 грн</p>
-                    <button type="button">Додати в кошик</button>
-                </article>
-                <article class="product-card" data-id="5" data-name="Апельсин і кориця" data-price="379">
-                    <img src="img/orange-spice.png" alt="Ароматична свічка «Апельсин і кориця»" width="400" height="400"
-                        loading="lazy">
-                    <h2>Апельсин і кориця</h2>
-                    <p class="product-description">Соєвий віск, соковитий апельсин і теплі нотки кориці. Горить до 45 годин.
-                    </p>
-                    <p class="product-price">389 грн</p>
-                    <button type="button">Додати в кошик</button>
-                </article>
-                <article class="product-card" data-id="6" data-name="Лісова казка" data-price="379">
-                    <img src="img/forest.png" alt="Ароматична свічка «Лісова казка»" width="400" height="400"
-                        loading="lazy">
-                    <h2>Лісова казка</h2>
-                    <p class="product-description">Соєвий віск, хвоя, кедр та свіжість лісового повітря. Горить до 50 годин.
-                    </p>
-                    <p class="product-price">439 грн</p>
-                    <button type="button">Додати в кошик</button>
-                </article>
-
-            </div>
+            <div class="product-grid" id="product-grid"></div>
         </section>
+
     </main>
 
     <footer>
         <p>© 2026 Свічки</p>
     </footer>
-<script src="js/products.js"></script>
+    <script src="js/products.js"></script>
+    <script src="js/main.js"></script>
+
 </body>
 
 </html>
