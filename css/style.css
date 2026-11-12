@@ -1,0 +1,151 @@
+:root {
+    --accent: #c2410c;
+    --text: #2d2318;
+    --muted: #6e5f4e;
+    --bg: #fff4da;
+    --surface: #fffaf0;
+    --border: #ecd7a4;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+}
+
+h1,
+h2 {
+    font-family: "Playfair Display", serif;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem 1.5rem;
+    padding: 1rem;
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+}
+
+header>a {
+    font-family: "Playfair Display", serif;
+    font-size: 1.5rem;
+    color: var(--accent);
+}
+
+nav {
+    display: flex;
+    gap: 1.25rem;
+}
+
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1.5rem 1rem;
+}
+
+footer {
+    padding: 1.5rem 1rem;
+    text-align: center;
+    color: var(--muted);
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+a:hover {
+    color: var(--accent);
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+}
+
+@media (min-width: 600px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 900px) {
+    .product-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.product-card img {
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+.product-card h2 {
+    margin: 1rem 1rem 0.25rem;
+    font-size: 1.25rem;
+}
+
+.product-description {
+    margin: 0 1rem 1rem;
+    color: var(--muted);
+}
+
+.product-price {
+    margin: 0 1rem 1rem;
+    font-weight: 600;
+    color: var(--accent);
+}
+
+.product-card button {
+    margin: auto 1rem 1rem;
+}
+button {
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.75rem 1rem;
+  color: #fff;
+  background: var(--accent);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background: #9a3412;
+}
+
+button:focus-visible {
+  outline: 3px solid var(--text);
+  outline-offset: 2px;
+}
