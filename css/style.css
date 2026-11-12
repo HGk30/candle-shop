@@ -138,14 +138,17 @@ button {
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  transition: background 0.2s;
+  transition: background 0.2s, transform 0.1s;
 }
 
 button:hover {
   background: #9a3412;
-}
+}і
 
 button:focus-visible {
   outline: 3px solid var(--text);
   outline-offset: 2px;
+}
+button:active {
+    transform: translateY(2px) 
 }
