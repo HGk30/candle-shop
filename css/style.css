@@ -196,8 +196,12 @@ button:active {
   .dropdown {
     left: auto;
     right: 0;
-    width: 560px;
+    width: 480px;
     border-left: 1px solid var(--border);
     border-radius: 0 0 0 12px;
   }
+}
+.empty-message {
+  grid-column: 1 / -1;
+  color: var(--muted);
 }

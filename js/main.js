@@ -1,5 +1,10 @@
 const productGrid = document.getElementById("product-grid");
 
+function getCategory() {
+  const params = new URLSearchParams(window.location.search);
+  return params.get("category");
+}
+
 function createCard(product) {
   return `
     <article class="product-card" data-id="${product.id}">
@@ -12,9 +17,27 @@ function createCard(product) {
   `;
 }
 
-function renderProducts() {
-  const cardsHtml = products.map(createCard).join("");
-  productGrid.innerHTML = cardsHtml;
+function renderProducts(list) {
+  if (list.length === 0) {
+    productGrid.innerHTML = '<p class="empty-message">У цій категорії поки що немає товарів.</p>';
+    return;
+  }
+  productGrid.innerHTML = list.map(createCard).join("");
 }
 
-renderProducts();
+const category = getCategory();
+const categoryNames = {
+  candles: "Ароматизовані свічки",
+  incense: "Ароматичні пахощі",
+  diffusers: "Аромадифузори",
+};
+const pageTitle = document.getElementById("page-title");
+
+if (category && categoryNames[category]) {
+  pageTitle.textContent = categoryNames[category];
+}
+const visibleProducts = (category && categoryNames[category])
+  ? products.filter(product => product.category === category)
+  : products;
+
+renderProducts(visibleProducts);
