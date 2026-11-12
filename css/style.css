@@ -42,7 +42,10 @@ header {
     padding: 1rem;
     background: var(--surface);
     border-bottom: 1px solid var(--border);
-    position: relative;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 12px rgba(43, 36, 32, 0.96);
 }
 
 header>a {
@@ -168,7 +171,7 @@ button:active {
     padding: 1.25rem 1rem;
     background: var(--surface);
     border-bottom: 1px solid var(--border);
-    box-shadow: 0 8px 24px rgba(43, 36, 32, 0.08);
+    box-shadow: 0 8px 24px rgba(43, 36, 32, 0.99);
 }
 
 .dropdown::before {
@@ -185,23 +188,44 @@ button:active {
     display: grid;
 }
 
-.dropdown a {
-    padding: 0.5rem 0;
+.dropdown-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+.dropdown-card img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.dropdown-title {
+    font-weight: 600;
+}
+
+.dropdown-sub {
+    font-size: 0.875rem;
+    color: var(--muted);
 }
 
 .dropdown a:hover {
     color: var(--accent);
 }
+
 @media (min-width: 900px) {
-  .dropdown {
-    left: auto;
-    right: 0;
-    width: 480px;
-    border-left: 1px solid var(--border);
-    border-radius: 0 0 0 12px;
-  }
+    .dropdown {
+        left: auto;
+        right: 0;
+        width: 720px;
+        border-left: 1px solid var(--border);
+        border-radius: 0 0 0 12px;
+    }
 }
+
 .empty-message {
-  grid-column: 1 / -1;
-  color: var(--muted);
+    grid-column: 1 / -1;
+    color: var(--muted);
 }

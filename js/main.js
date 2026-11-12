@@ -8,7 +8,7 @@ function getCategory() {
 function createCard(product) {
   return `
     <article class="product-card" data-id="${product.id}">
-      <img src="${product.image}" alt="Ароматична свічка «${product.name}»" width="400" height="400" loading="lazy">
+      <img src="${product.image}" alt="${product.name}" width="400" height="400" loading="lazy">
       <h2>${product.name}</h2>
       <p class="product-description">${product.description}</p>
       <p class="product-price">${product.price} грн</p>
