@@ -41,3 +41,9 @@ const visibleProducts = (category && categoryNames[category])
   : products;
 
 renderProducts(visibleProducts);
+productGrid.addEventListener("click", function (event) {
+  const button = event.target.closest("button[data-id]");
+  if (!button) return;
+
+  addToCart(Number(button.dataset.id));
+});

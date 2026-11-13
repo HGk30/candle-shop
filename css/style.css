@@ -215,6 +215,7 @@ button:active {
 .dropdown a:hover {
     color: var(--accent);
 }
+
 .dropdown-card img:hover {
     transform: scale(1.03);
 }
@@ -232,4 +233,106 @@ button:active {
 .empty-message {
     grid-column: 1 / -1;
     color: var(--muted);
+}
+
+.cart-count {
+    display: inline-block;
+    min-width: 1.4rem;
+    padding: 0 0.4rem;
+    margin-left: 0.25rem;
+    font-size: 0.8rem;
+    line-height: 1.4rem;
+    text-align: center;
+    color: #fff;
+    background: var(--accent);
+    border-radius: 999px;
+}
+
+.cart-row {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 0.75rem 1rem;
+    align-items: center;
+    padding: 1rem;
+    margin-bottom: 0.75rem;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+}
+
+.cart-row img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.cart-info h2 {
+    margin: 0 0 0.25rem;
+    font-size: 1.1rem;
+}
+
+.cart-info p {
+    margin: 0;
+    color: var(--muted);
+}
+
+.cart-line-total {
+    grid-column: 1 / -1;
+    margin: 0;
+    font-weight: 600;
+    color: var(--accent);
+}
+
+.cart-total {
+    margin-top: 1rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+    text-align: right;
+}
+
+@media (min-width: 600px) {
+    .cart-row {
+        grid-template-columns: 80px 1fr auto;
+    }
+
+    .cart-line-total {
+        grid-column: auto;
+    }
+}
+
+.quantity-controls {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.qty-btn {
+    width: 2.25rem;
+    height: 2.25rem;
+    padding: 0;
+    font-size: 1.25rem;
+    line-height: 1;
+}
+
+.qty-value {
+    min-width: 1.5rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+.remove-btn {
+    margin-left: 0.5rem;
+    padding: 0.4rem 0.75rem;
+    font-size: 0.875rem;
+    color: var(--muted);
+    background: transparent;
+    border: 1px solid var(--border);
+}
+
+.remove-btn:hover {
+    color: #fff;
+    background: var(--accent);
 }
