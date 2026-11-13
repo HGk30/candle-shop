@@ -61,3 +61,24 @@ function removeFromCart(productId) {
   updateCartCount();
 }
 updateCartCount();
+function getCartDetails() {
+  const cart = getCart();
+  const items = [];
+  let total = 0;
+
+  cart.forEach(function (entry) {
+    const product = products.find(item => item.id === entry.id);
+    if (!product) return;
+
+    items.push({
+      id: product.id,
+      name: product.name,
+      price: product.price,
+      category: product.category,
+      quantity: entry.quantity
+    });
+    total += product.price * entry.quantity;
+  });
+
+  return { items: items, total: total };
+}

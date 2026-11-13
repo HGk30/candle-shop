@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Оформлення замовлення — Свічки</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <a href="index.html">Свічки</a>
+        <nav>
+            <div class="nav-item has-dropdown">
+                <a href="index.html">Каталог</a>
+                <div class="dropdown">
+                    <a class="dropdown-card" href="index.html?category=candles">
+                        <img src="img/vanilla.png" alt="" width="120" height="120">
+                        <span class="dropdown-title">Свічки</span>
+                        <span class="dropdown-sub">Ванільний вечір</span>
+                    </a>
+                    <a class="dropdown-card" href="index.html?category=incense">
+                        <img src="img/incense-green-tea-mint.png" alt="" width="120" height="120">
+                        <span class="dropdown-title">Ароматичні пахощі</span>
+                        <span class="dropdown-sub">Зелений чай і м'ята</span>
+                    </a>
+                    <a class="dropdown-card" href="index.html?category=diffusers">
+                        <img src="img/diffuser-rose-peony.png" alt="" width="120" height="120">
+                        <span class="dropdown-title">Аромадифузори</span>
+                        <span class="dropdown-sub">Троянда і півонія</span>
+                    </a>
+                </div>
+            </div>
+            <a href="cart.html">Кошик <span class="cart-count" id="cart-count">0</span></a>
+            <a href="checkout.html">Оформлення</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Оформлення замовлення</h1>
+
+        <div class="checkout-layout">
+            <section class="order-summary">
+                <h2>Ваше замовлення</h2>
+                <div id="order-summary"></div>
+            </section>
+
+            <form class="checkout-form" id="checkout-form">
+                <h2>Контактні дані</h2>
+
+                <div class="form-field">
+                    <label for="name">Ім’я та прізвище</label>
+                    <input type="text" id="name" name="name" autocomplete="name" minlength="2" required>
+                </div>
+
+                <div class="form-field">
+                    <label for="phone">Телефон</label>
+                    <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="+380 50 123 45 67"
+                        pattern="[0-9+\s\-]{10,18}" title="Від 10 до 18 символів: цифри, пробіли, плюс або дефіс"
+                        required>
+                </div>
+
+                <div class="form-field">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" autocomplete="email" required>
+                </div>
+
+                <div class="form-field">
+                    <label for="city">Місто</label>
+                    <input type="text" id="city" name="city" autocomplete="address-level2" required>
+                </div>
+
+                <div class="form-field">
+                    <label for="address">Адреса або відділення Нової пошти</label>
+                    <input type="text" id="address" name="address" autocomplete="street-address" required>
+                </div>
+
+                <button type="submit">Підтвердити замовлення</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2026 Свічки</p>
+    </footer>
+
+    <script src="js/products.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/checkout.js"></script>
+</body>
+
+</html>

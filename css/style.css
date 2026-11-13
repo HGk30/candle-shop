@@ -336,3 +336,76 @@ button:active {
     color: #fff;
     background: var(--accent);
 }
+
+.checkout-layout {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.order-summary,
+.checkout-form {
+    padding: 1.25rem;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+}
+
+.order-summary h2,
+.checkout-form h2 {
+    margin-top: 0;
+    font-size: 1.25rem;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.summary-total {
+    font-weight: 600;
+    color: var(--accent);
+    border-bottom: none;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    margin-bottom: 1rem;
+}
+
+.form-field label {
+    font-weight: 600;
+}
+
+.form-field input {
+    font: inherit;
+    padding: 0.7rem 0.8rem;
+    color: var(--text);
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+}
+
+.form-field input:focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 1px;
+}
+
+.form-field input:user-invalid {
+    border-color: #b91c1c;
+}
+
+.checkout-form button {
+    width: 100%;
+}
+
+@media (min-width: 900px) {
+    .checkout-layout {
+        grid-template-columns: 1fr 1fr;
+        align-items: start;
+    }
+}
