@@ -200,6 +200,7 @@ button:active {
     aspect-ratio: 1 / 1;
     object-fit: cover;
     border-radius: 8px;
+    transition: transform 0.2s;
 }
 
 .dropdown-title {
@@ -213,6 +214,9 @@ button:active {
 
 .dropdown a:hover {
     color: var(--accent);
+}
+.dropdown-card img:hover {
+    transform: scale(1.03);
 }
 
 @media (min-width: 900px) {
